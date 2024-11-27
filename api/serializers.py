@@ -4,4 +4,4 @@ from .models import Evento
 class EventoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Evento
-        fields = '__all__'
+        fields = ['title','start','end']

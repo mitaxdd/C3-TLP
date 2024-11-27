@@ -9,5 +9,14 @@ def obtener_feriados():
     }
     response = requests.get(url, params=params)
     if response.status_code == 200:
-        return response.json()
+        data=response.json()
+        events = []
+        for event in data['response']['holidays']:
+            events.append({
+                'title': event['name'],
+                'start': event['date']['iso'],
+                'end': event['date']['iso']
+            })
+        return events
+    
     return None

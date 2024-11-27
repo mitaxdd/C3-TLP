@@ -26,10 +26,10 @@ class Evento(models.Model):
         ('SUSPENSION_PARCIAL', 'Suspensión de Actividades Parcial'),
     ]
 
-    titulo = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
     descripcion = models.TextField()
-    fecha_inicio = models.DateTimeField()
-    fecha_fin = models.DateTimeField()
+    start = models.DateTimeField()
+    end = models.DateTimeField()
     tipo_evento = models.CharField(max_length=50, choices=TIPOS_EVENTO)
     creado_por = models.ForeignKey(User, on_delete=models.CASCADE)
 
