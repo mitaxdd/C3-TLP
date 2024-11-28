@@ -1,6 +1,0 @@
-api rest q exporte en json
-conexion con calendarific (facil)
-
-
-
-front

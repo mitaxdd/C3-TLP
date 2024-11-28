@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+# modelo de evento
 class Evento(models.Model):
     TIPOS_EVENTO = [
         ('INICIO_SEMESTRE', 'Inicio de Semestre'),
@@ -34,4 +36,4 @@ class Evento(models.Model):
     creado_por = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.titulo
+        return self.title

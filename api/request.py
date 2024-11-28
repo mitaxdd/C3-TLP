@@ -1,5 +1,9 @@
 import requests
 
+
+#uso de api externa (calendarific) para obtener feriados de chile
+# en ingles :(
+
 def obtener_feriados():
     url = "https://calendarific.com/api/v2/holidays"
     params = {
